@@ -23,26 +23,9 @@ data <- data %>%
   mutate(max_hundred_cent = scale(max_hundred, center = T, scale = F)) %>%            #centering
   mutate(spr_ten_cent = spr_ten - mean(spr_ten)) %>%                                  #centering
  
-  mutate(winter_dens_std_2_sd = (winter_dens - mean(winter_dens)) / (2*sd(winter_dens))) %>%                      #standardising 
+  mutate(winter_dens_std_2_sd = (winter_dens - mean(winter_dens)) / (2*sd(winter_dens))) %>%                   #standardising 
   mutate(winter_dens_cent = winter_dens - mean(winter_dens))  %>%                                              #centering
 
 mutate(summer_dens_std_2_sd = (summer_dens - mean(summer_dens)) / (2*sd(summer_dens))) %>%                      #standardising 
-  mutate(summer_dens_cent = summer_dens - mean(summer_dens))                                               #centering
-names(data)
-countid<- data %>% count(individ_dbid) #233 in, 1-13 get information on data structure
-countid <- countid %>% 
-  mutate(n = n+1)
-countyr<- data %>% count(yr) # 18 in 21-65 get information on data structure
+  mutate(summer_dens_cent = summer_dens - mean(summer_dens))                                                    #centering
 
-mean(countid$n)
-sd(countid$n)
-range(countid$n)
-
-
-mean(countyr$n)
-sd(countyr$n)
-range(countyr$n)
-
-
-
-(View(countid))
