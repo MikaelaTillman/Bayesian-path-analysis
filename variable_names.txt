@@ -1,0 +1,9 @@
+prev_fall = body mass in autumn i previoous year
+spring = body mass in spring in current year
+fall = body mass in autumn in current year
+individ_dbid = individual id
+yr = year
+
+max_snow = max. snow depth
+spr = spring onset
+max = max. EVI
